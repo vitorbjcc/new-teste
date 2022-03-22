@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            color: white;
+            background-color: black;
+        }
+        .a {
+            text-align: center;
+            align-items: center;
+            size: 20pt;
+        }
+        #b {
+            cursor: pointer;
+            border: 1px solid #e9e91d;
+            padding-right: 20px;
+            padding-left: 20px;
+            border-radius: 5px 5px 5px white;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h1 class="a">Log with your account</h1>
+    <div class="a">
+        <input type="text" name="name" id="name" placeholder="Your nick" required>
+    </div>
+    <div class="a">
+        <input type="password" name="pass" id="pass" placeholder="Your password" required>
+    </div>
+    <div class="a">
+        <input type="button" value="Connect" id="b">
+    </div>
+    <script>
+        function load() {
+            console.log('USER: ADMIN')
+            console.log('PASSWORD: 123')
+        }
+        function button() {
+            var item = window.document.getElementById('name')
+            var item2 = window.document.getElementById('pass')
+            if (item.value == 'ADMIN' && item2.value == '123') {
+                window.alert('CONNECTED!')
+            } else {
+                window.alert('ERROR ANYTHING ITS WRONG!')
+            }
+        }
+        window.document.getElementById('b').addEventListener('click', button)
+    </script>
+</body>
+</html>
